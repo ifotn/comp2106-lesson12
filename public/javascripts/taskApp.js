@@ -13,8 +13,7 @@ app.factory('tasks', ['$http', function($http) {
 
     // get tasks from server
     o.getTasks = function() {
-        console.log('factory getTasks');
-      return $http.get('/tasks').success(function(data) {
+        return $http.get('/tasks').success(function(data) {
           angular.copy(data,  o.tasks);
       });
     };
